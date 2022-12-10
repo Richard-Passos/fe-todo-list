@@ -1,0 +1,72 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40vh;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3.6rem;
+  color: #fff;
+  text-align: center;
+}
+
+.toDo_controls_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  width: 80%;
+}
+
+.input_add_container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.toDo_add {
+  width: 80%;
+  padding: 2rem;
+  border: 0;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.toDo_filter {
+  padding: 1.5rem;
+  border: 0;
+  border-radius: 0.7rem;
+}
+.toDo_filter:hover {
+  cursor: pointer;
+}
+
+.icon_add {
+  padding: 1.6rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: 0 1rem 1rem 0;
+}
+.icon_add:hover {
+  background-color: #111;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    height: 50vh;
+  }
+
+  .toDo_controls_container {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0;
+    height: 15rem;
+  }
+
+  .input_add_container {
+    width: initial;
+    min-width: 20rem;
+  }
+}

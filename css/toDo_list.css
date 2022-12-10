@@ -1,0 +1,62 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.list_content {
+  display: flex;
+  justify-content: center;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.list_paragraph {
+  display: flex;
+  align-items: center;
+  width: 32rem;
+  height: 4.4rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.8rem 0 0 0.8rem;
+  overflow: hidden;
+}
+.list_paragraph:hover {
+  overflow-x: auto;
+}
+
+.icon_container {
+  background-color: #ff4500;
+}
+.icon_container:hover {
+  background-color: #ff6722;
+  cursor: pointer;
+}
+
+.background_delete {
+  background-color: #000;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+.background_delete:hover {
+  background-color: #111;
+}
+
+.icon_done, .icon_delete {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.2rem 1.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .list_paragraph {
+    width: 50vw;
+  }
+
+  .icon_done, .icon_delete {
+    padding: 1.2rem 1rem;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" 
+    />
+
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/toDo_list.css">
+    <link rel="stylesheet" href="css/toDo_list_expecials.css">
+
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="centralize_content header">
+        <picture class="logo_container">
+          <a href="index.html">
+            <img class="logo" 
+            src="http://www.fullture.com/wp-content/uploads/2021/03/cropped-favicon_Prancheta-1-2.png"
+            alt="Logo">
+          </a>
+        </picture>
+
+        <nav class="header_nav">
+          <ul class="nav_list">
+            <li class="header_list_content"><a href="#">Home</a></li>
+            <li class="header_list_content" role="separator">|</li>
+            <li class="header_list_content"><a id="current_page" href="index.html">To-Do</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="centralize_content">
+      <main class="main" id="main">
+        <h1 class="title">
+          FULLTURE To-Do List
+        </h1>
+
+        <div class="toDo_controls_container">
+          <div class="input_add_container">
+            <input class="toDo_add" type="text" name="toAdd" id="toAdd">
+            <span role="button" class="material-symbols-outlined icon_add" id="sendToAdd">
+              add_box
+            </span>
+          </div>
+
+          <select class="toDo_filter" name="filter" id="filter">
+            <option value="tasks">Todos</option>
+            <option value="finalizedTasks">Finalizados</option>
+            <option value="notFinalizedTasks">Não Finalizados</option>
+          </select>
+        </div>
+        <button class="remove_all_tasks" id="removeAll">Remover Todos</button>
+      </main>
+
+      <div id="list_container">
+        <div class="list" id="list">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

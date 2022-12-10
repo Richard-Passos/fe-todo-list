@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    270deg,
+    #010101 0,
+    #020202 16.67%,
+    #14001c 33.33%,
+    #17001f 50%, 
+    #260034 66.67%,
+    #3d0041 83.33%,
+    #58004e 100%
+  );
+  background-repeat: no-repeat;
+  padding-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.centralize_content {
+  width: 80vw;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}

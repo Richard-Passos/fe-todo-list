@@ -1,0 +1,27 @@
+.remove_all_tasks {
+  width: 15rem;
+  align-self: center;
+  background-color: #260034;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.remove_all_tasks:hover {
+  cursor: pointer;
+  background-color: #3d0041;
+}
+
+.no_itens {
+  align-self: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 3.5rem;
+  color: #fff;
+  text-shadow: 0 0.8rem rgba(0, 0, 0, 1);
+}
+
+.finalized {
+  text-decoration: line-through;
+  background-color: #aaa;
+}
