@@ -1,0 +1,49 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 6rem;
+  background-image: linear-gradient(
+    270deg,
+    #010101 0,
+    #020202 16.67%,
+    #14001c 33.33%,
+    #17001f 50%, 
+    #260034 66.67%,
+    #3d0041 83.33%,
+    #58004e 100%
+  );
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+  
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+input {
+  outline: none;
+  border: 0;
+}
+
+label {
+  width: 4.2rem;
+}
+label:hover {
+  cursor: pointer;
+}
+
+.login_img {
+  width: 8rem;
+}
+

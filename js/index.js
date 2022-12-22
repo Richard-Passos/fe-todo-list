@@ -1,8 +1,21 @@
-let tasks = [];
+let logado = JSON.parse(sessionStorage.getItem("logado"));
+if (!logado) {
+  window.location = "loginPage.html";
+}
+
+let accounts = JSON.parse(localStorage.getItem("accounts"));
+let userEmail = JSON.parse(sessionStorage.getItem("userEmail"))
+let userData = accounts.find((account) => userEmail == account.email);
+let userAccountIndex = accounts.indexOf(userData);
+
+let tasks = userData.toDo_list;
 let finalizedTasks = [];
 let notFinalizedTasks = [];
 
 window.onload = showList;
+
+const btnHome = document.getElementById("goHome");
+btnHome.addEventListener("click", () => sessionStorage.setItem("logado", false));
 
 const btnAdd = document.getElementById("sendToAdd");
 btnAdd.addEventListener("click", addTask);
@@ -44,7 +57,10 @@ function showList() {
         } else {
           task.done = false;
         }
+        saveAccounts();
+        saveLocalStorage("accounts", accounts);
 
+        finalizedTasks.splice(task, 1);
         notFinalizedTasks.splice(task, 1);
       });
       iconDone.addEventListener("click", showList);
@@ -59,6 +75,8 @@ function showList() {
         const task = findTarget(event);
 
         tasks.splice(task, 1);
+        saveAccounts()
+        saveLocalStorage("accounts", accounts);
         finalizedTasks.splice(task, 1);
         notFinalizedTasks.splice(task, 1);
       });
@@ -122,7 +140,6 @@ function listToShow() {
   if (listToShow == "finalizedTasks") return finalizedTasks;
   if (listToShow == "notFinalizedTasks") return notFinalizedTasks;
 }
-
 function findTarget(event) {
   let target = event.target.parentNode.parentNode.firstChild.innerText;
   let findedTarget = tasks.filter((task) => task.name == target);
@@ -140,6 +157,8 @@ function addTask() {
     alert("Tarefa já listada!");
   } else {
     tasks.push({ name: toAdd, done: false });
+    saveAccounts();
+    saveLocalStorage("accounts", accounts);
   }
 }
 
@@ -175,4 +194,15 @@ function removeAll() {
       }
     }
   }
+  saveAccounts();
+  saveLocalStorage("accounts", accounts);
+}
+
+function saveLocalStorage(nameToSave, toSave) {
+  localStorage.setItem(nameToSave, JSON.stringify(toSave))
+}
+
+function saveAccounts() {
+  userData.toDo_list = tasks;
+  accounts[userAccountIndex] = userData
 }

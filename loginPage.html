@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"
+    >
+
+    <link rel="stylesheet" 
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" 
+    />
+
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/login_register/global.css">
+    <link rel="stylesheet" href="./css/login_register/form.css">
+    <link rel="stylesheet" href="./css/login_register/foter.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js">
+    </script>
+
+    <script src="./js/login.js" defer></script>
+  </head>
+  <body>
+    <picture class="login_picture">
+      <img class="login_img" 
+      src="./img/userImage.png"
+      alt="Imagem do Login"
+      >
+    </picture>
+
+    
+    <main id="main">
+      <h1 class="title">Login</h1>
+
+      <form class="form login_form" id="login_form" autocomplete="off">
+        <div class="row_form">
+          <label for="email">
+            <span class="material-symbols-outlined email_icon icon">
+              person
+            </span>
+          </label>
+          <input required type="email" name="email" id="email" class="input login_input" placeholder="Digite o seu e-mail">
+        </div>
+
+        <div class="row_form">
+          <label for="password">
+            <span class="material-symbols-outlined lock_icon icon">
+              lock
+            </span>
+          </label>
+        <input required type="password" name="password" id="password" class="input login_input" placeholder="Digite a sua senha">
+        </div>
+
+        <div class="form_actions">
+          <button type="submit" id="btnSubmit">Entrar</button>
+
+          <p id="miss_password">Esqueceu a senha?</p>
+        </div>
+      </form>
+    </main>
+
+    <footer id="footer">
+      <span class="footer_span">Criar conta 
+        <span class="material-symbols-outlined arrow_icon icon">
+          arrow_forward
+        </span>
+        <a class="footer_link" href="register.html">Registar-se</a>
+      </span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  max-width: 80%;
+  padding: 2rem 1.5rem;
+  background-color: rgba(999, 999, 999, 0.5);
+  border-radius: 0 0 1rem 1rem;
+}
+.footer_span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.arrow_icon {
+  font-size: 1.2rem;
+}
+.arrow_icon:hover {
+  cursor: auto;
+}
+
+.footer_link {
+  font-size: 1.2rem;
+}
+.footer_link:hover {
+  color: #fff;
+  cursor: pointer;
+}

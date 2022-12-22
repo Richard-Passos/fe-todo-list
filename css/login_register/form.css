@@ -1,0 +1,105 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 30rem;
+  max-width: 80%;
+  background-color: rgba(999, 999, 999, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.title {
+  font-size: 2.4rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 1.4rem;
+}
+
+.row_form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(999, 999, 999, 0.1);
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  padding-right: 0;
+  font-size: 2rem;
+}
+.icon:hover {
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  background-color: rgba( 0, 0, 0, 0);
+}
+
+.form_actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+#btnSubmit {
+  background-color: rgba(999, 999, 999, 1);
+  border: 0;
+  border-radius: 0.5rem;
+  color: #000;
+  padding: 0.8rem 2rem;
+}
+#btnSubmit:hover {
+  cursor: pointer;
+  background-color: rgba(999, 999, 999, 0.6);
+}
+
+#miss_password {
+  font-size: 1.2rem;
+}
+#miss_password:hover {
+  cursor: pointer;
+  color: #aaa;
+}
+
+.register_actions #btnSubmit {
+  width: 100%;
+}
+
+.register_terms {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.register_span_terms {
+  color: #33f;
+  font-weight: bold;
+}
+.register_span_terms:hover {
+  cursor: pointer;
+  color: #55f;
+}
+
+@media screen and (max-width: 300px) {
+  .form_actions {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #btnSubmit {
+    width: 100%;
+  }
+}
