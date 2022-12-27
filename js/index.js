@@ -4,7 +4,7 @@ if (!logado) {
 }
 
 let accounts = JSON.parse(localStorage.getItem("accounts"));
-let userEmail = JSON.parse(sessionStorage.getItem("userEmail"))
+let userEmail = JSON.parse(sessionStorage.getItem("userEmail"));
 let userData = accounts.find((account) => userEmail == account.email);
 let userAccountIndex = accounts.indexOf(userData);
 
@@ -15,7 +15,9 @@ let notFinalizedTasks = [];
 window.onload = showList;
 
 const btnHome = document.getElementById("goHome");
-btnHome.addEventListener("click", () => sessionStorage.setItem("logado", false));
+btnHome.addEventListener("click", () =>
+  sessionStorage.setItem("logado", false)
+);
 
 const btnAdd = document.getElementById("sendToAdd");
 btnAdd.addEventListener("click", addTask);
@@ -75,7 +77,7 @@ function showList() {
         const task = findTarget(event);
 
         tasks.splice(task, 1);
-        saveAccounts()
+        saveAccounts();
         saveLocalStorage("accounts", accounts);
         finalizedTasks.splice(task, 1);
         notFinalizedTasks.splice(task, 1);
@@ -151,14 +153,18 @@ function findTarget(event) {
 function addTask() {
   let toAdd = document.getElementById("toAdd").value;
 
-  let duplicated = tasks.filter((task) => task.name == toAdd);
+  if (toAdd != "") {
+    let duplicated = tasks.filter((task) => task.name == toAdd);
 
-  if (duplicated.length > 0) {
-    alert("Tarefa já listada!");
+    if (duplicated.length > 0) {
+      alert("Tarefa já listada!");
+    } else {
+      tasks.push({ name: toAdd, done: false });
+      saveAccounts();
+      saveLocalStorage("accounts", accounts);
+    }
   } else {
-    tasks.push({ name: toAdd, done: false });
-    saveAccounts();
-    saveLocalStorage("accounts", accounts);
+    alert("Preencha o campo!");
   }
 }
 
@@ -167,42 +173,35 @@ function removeAll() {
     "Você tem certeza que deseja remover todos os itens desta lista?"
   );
 
-  if (confirmRemoveAll) {
+  if(confirmRemoveAll) {
     let listToRemoveAll = listToShow();
-    let toRemoveFromTasks = [];
+    let removeFromTasks = [];
+    
+    listToRemoveAll.map((element) => {
+      removeFromTasks.push(element);
+    });
 
-    if (listToRemoveAll == finalizedTasks) {
-      tasks.map((task) => {
-        if (task.done == true) toRemoveFromTasks.push(task);
-      });
-    } else if (listToRemoveAll == notFinalizedTasks) {
-      tasks.map((task) => {
-        if (task.done == false) toRemoveFromTasks.push(task);
-      });
-    } else {
-      toRemoveFromTasks = tasks;
-    }
+    for (let i = 0; i < removeFromTasks.length; i++) {
+      let indexToRemove = tasks.indexOf(removeFromTasks[i]);
+      tasks.splice(indexToRemove, 1);
 
-    for (let i = 0; i < toRemoveFromTasks.length; i++) {
-      let indexOfToRemove = tasks.indexOf(toRemoveFromTasks[i]);
-      tasks.splice(indexOfToRemove, 1);
-      listToRemoveAll.pop();
-
-      if (toRemoveFromTasks == tasks) {
-        finalizedTasks.pop();
-        notFinalizedTasks.pop();
+      if(removeFromTasks[i].done == true) {
+        finalizedTasks = [];
+      } else {
+        notFinalizedTasks = [];
       }
     }
+
+    saveAccounts();
+    saveLocalStorage("accounts", accounts)
   }
-  saveAccounts();
-  saveLocalStorage("accounts", accounts);
 }
 
 function saveLocalStorage(nameToSave, toSave) {
-  localStorage.setItem(nameToSave, JSON.stringify(toSave))
+  localStorage.setItem(nameToSave, JSON.stringify(toSave));
 }
 
 function saveAccounts() {
   userData.toDo_list = tasks;
-  accounts[userAccountIndex] = userData
+  accounts[userAccountIndex] = userData;
 }

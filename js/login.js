@@ -5,7 +5,6 @@ if (logado) {
 
 let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
 
-
 const loginForm = document.getElementById("login_form");
 
 const loginBtnSubmit = loginForm.querySelector("#btnSubmit");
