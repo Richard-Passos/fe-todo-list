@@ -25,6 +25,13 @@
   font-size: 1.4rem;
 }
 
+.change-password_form .label {
+  width: 8rem;
+}
+.change-password_form .confirmP_label {
+  width: 11rem;
+}
+
 .row_form {
   display: flex;
   align-items: center;

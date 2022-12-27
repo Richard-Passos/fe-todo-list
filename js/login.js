@@ -23,6 +23,9 @@ loginBtnSubmit.addEventListener("click", () => {
   }
 })
 
+const btnMissPassword = loginForm.querySelector("#miss_password");
+btnMissPassword.addEventListener("click", missPassword)
+
 function verifyLoginAttempt(email, password) {
   const cryptoUserPassword = CryptoJS.MD5(password).toString();
 
@@ -38,4 +41,23 @@ function verifyLoginAttempt(email, password) {
   }
 
   return false
+}
+
+
+function missPassword() {
+  let userEmail = loginForm.querySelector("#email").value;
+
+  if(userEmail != '') {
+    let isRegistred = accounts.find((account) => account.email == userEmail);
+
+    if(isRegistred) {
+      sessionStorage.setItem("userEmail", JSON.stringify(userEmail));
+      window.location = "missPassword.html"
+    } else {
+      alert("Email não cadastrado!")
+    }
+
+  } else {
+    alert("Preencha o campo de email!")
+  }
 }

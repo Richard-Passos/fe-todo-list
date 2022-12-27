@@ -39,6 +39,7 @@ input {
 label {
   width: 4.2rem;
 }
+
 label:hover {
   cursor: pointer;
 }
