@@ -9,7 +9,6 @@ const btnChangePassword = form.querySelector("#btnSubmit");
 btnChangePassword.addEventListener("click", changePassword);
 
 function changePassword() {
-  event.preventDefault();
 
   let newPassword = form.querySelector("#newPassword").value;
   let confirmNewPassword = form.querySelector("#confirmNewPassword").value;
@@ -22,12 +21,8 @@ function changePassword() {
       saveAccounts(newUserPassword);
       saveLocalStorage()
 
-      form.querySelector("#newPassword").value = "";
-      form.querySelector("#confirmNewPassword").value = "";
       alert("Nova senha cadastrada!");
     }
-  } else {
-    alert("Preencha todos os campos!");
   }
 }
 
