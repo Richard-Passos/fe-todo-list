@@ -52,7 +52,7 @@ function missPassword() {
 
     if(isRegistred) {
       sessionStorage.setItem("userEmail", JSON.stringify(userEmail));
-      window.location = "missPassword.html"
+      window.location = "changePassword.html"
     } else {
       alert("Email não cadastrado!")
     }

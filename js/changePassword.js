@@ -11,8 +11,8 @@ btnChangePassword.addEventListener("click", changePassword);
 function changePassword() {
   event.preventDefault();
 
-  let newPassword = form.querySelector("#password").value;
-  let confirmNewPassword = form.querySelector("#confirm_password").value;
+  let newPassword = form.querySelector("#newPassword").value;
+  let confirmNewPassword = form.querySelector("#confirmNewPassword").value;
 
   if (newPassword != '' && confirmNewPassword != '') {
     if (newPassword !== confirmNewPassword) {
@@ -22,8 +22,8 @@ function changePassword() {
       saveAccounts(newUserPassword);
       saveLocalStorage()
 
-      form.querySelector("#password").value = "";
-      form.querySelector("#confirm_password").value = "";
+      form.querySelector("#newPassword").value = "";
+      form.querySelector("#confirmNewPassword").value = "";
       alert("Nova senha cadastrada!");
     }
   } else {
