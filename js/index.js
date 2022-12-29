@@ -14,14 +14,20 @@ let notFinalizedTasks = [];
 
 window.onload = showList;
 
-const btnHome = document.getElementById("goHome");
-btnHome.addEventListener("click", () =>
+const btnLogout = document.getElementById("Logout");
+btnLogout.addEventListener("click", () =>
   sessionStorage.setItem("logado", false)
 );
 
 const btnAdd = document.getElementById("sendToAdd");
-btnAdd.addEventListener("click", addTask);
-btnAdd.addEventListener("click", showList);
+btnAdd.addEventListener("click", (event) => {
+  event.preventDefault()
+  addTask();
+});
+btnAdd.addEventListener("click", (event) => {
+  event.preventDefault();
+  showList();
+});
 
 const btnFilter = document.getElementById("filter");
 btnFilter.addEventListener("change", showList);
@@ -142,6 +148,7 @@ function listToShow() {
   if (listToShow == "finalizedTasks") return finalizedTasks;
   if (listToShow == "notFinalizedTasks") return notFinalizedTasks;
 }
+
 function findTarget(event) {
   let target = event.target.parentNode.parentNode.firstChild.innerText;
   let findedTarget = tasks.filter((task) => task.name == target);
