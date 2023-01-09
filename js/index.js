@@ -14,20 +14,22 @@ let notFinalizedTasks = [];
 
 window.onload = showList;
 
+const form = document.getElementById("form");
+form.addEventListener("keydown", (ev) => {
+  if(ev.key === "Enter") {
+    addTask(ev);
+    showList(ev)
+  }
+});
+
 const btnLogout = document.getElementById("Logout");
 btnLogout.addEventListener("click", () =>
   sessionStorage.setItem("logado", false)
 );
 
 const btnAdd = document.getElementById("sendToAdd");
-btnAdd.addEventListener("click", (event) => {
-  event.preventDefault()
-  addTask();
-});
-btnAdd.addEventListener("click", (event) => {
-  event.preventDefault();
-  showList();
-});
+btnAdd.addEventListener("click", addTask);
+btnAdd.addEventListener("click", showList);
 
 const btnFilter = document.getElementById("filter");
 btnFilter.addEventListener("change", showList);
@@ -36,7 +38,9 @@ const btnRemoveAll = document.getElementById("removeAll");
 btnRemoveAll.addEventListener("click", removeAll);
 btnRemoveAll.addEventListener("click", showList);
 
-function showList() {
+function showList(ev) {
+  ev.preventDefault()
+
   removeList();
 
   updateTasks();
@@ -157,7 +161,9 @@ function findTarget(event) {
   return indexOfFindedTarget;
 }
 
-function addTask() {
+function addTask(ev) {
+  ev.preventDefault()
+  
   let toAdd = document.getElementById("toAdd").value;
 
   if (toAdd != "") {
@@ -169,6 +175,8 @@ function addTask() {
       tasks.push({ name: toAdd, done: false });
       saveAccounts();
       saveLocalStorage("accounts", accounts);
+
+      document.getElementById("toAdd").value = "";
     }
   } else {
     alert("Preencha o campo!");
