@@ -18,7 +18,7 @@ https://richard-passos.github.io/ToDo_List_Challenge/loginPage.html
 <table>
   <tr>
     <td align="center">
-      <a href="[http://github.com/tatialveso](https://github.com/Richard-Passos/Richard-Passos)">
+      <a href="https://github.com/Richard-Passos">
         <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
         <sub>
           <b>Richard P</b>
