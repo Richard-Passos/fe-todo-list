@@ -9,13 +9,10 @@ Desafio Fullture para fazer uma Todo List com Login e Register Page
 * JavaScript;
 
 ## :rocket: Rodando o projeto
-Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto:
+Para rodar o repositório é recomendado acessar:
 ```
-<linha de comando>
+https://richard-passos.github.io/ToDo_List_Challenge/loginPage.html
 ```
-
-## :soon: Implementação futura
-* O que será implementado na próxima sprint?
 
 ## :handshake: Colaboradores
 <table>
@@ -24,7 +21,7 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
       <a href="http://github.com/tatialveso">
         <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
         <sub>
-          <b>tatialveso</b>
+          <b>Richard P</b>
         </sub>
       </a>
     </td>
@@ -32,3 +29,4 @@ Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando 
 </table>
 
 ## :dart: Status do projeto
+Finalizado
