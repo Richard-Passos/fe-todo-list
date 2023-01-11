@@ -19,7 +19,7 @@ https://richard-passos.github.io/ToDo_List_Challenge/loginPage.html
   <tr>
     <td align="center">
       <a href="https://github.com/Richard-Passos">
-        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <img src="https://img.freepik.com/vetores-premium/desenho-de-desenho-animado-de-um-programador_29937-8176.jpg" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
         <sub>
           <b>Richard P</b>
         </sub>
