@@ -16,7 +16,7 @@ Desafio Fullture para fazer uma Todo List com Login e Register Page.
 
 ## :rocket: Run project
 ```
-https://richard-passos.github.io/todo-list-fullture-challenge/loginPage.html
+https://richard-passos.github.io/fe-todo-list/loginPage.html
 ```
 
 <br>
