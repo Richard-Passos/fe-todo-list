@@ -8,6 +8,7 @@ Desafio Fullture para fazer uma Todo List com Login e Register Page.
 <br>
 
 ## :wrench: Technologies used
+* ReactJS
 * JavaScript
 * CSS
 * HTML
