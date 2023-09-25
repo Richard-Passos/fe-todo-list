@@ -1,25 +1,32 @@
-<h1 align="center">:file_cabinet: Todo List</h1>
+<h1 align="center">:file_cabinet: Todo list</h1>
 
-## :memo: Descrição
-Desafio Fullture para fazer uma Todo List com Login e Register Page
+<br>
 
-## :wrench: Tecnologias utilizadas
-* HTML;
-* CSS;
-* JavaScript;
+## :memo: Description
+Desafio Fullture para fazer uma Todo List com Login e Register Page.
 
-## :rocket: Rodando o projeto
-Para rodar o repositório é recomendado acessar:
+<br>
+
+## :wrench: Technologies used
+* JavaScript
+* CSS
+* HTML
+
+<br>
+
+## :rocket: Run project
 ```
 https://richard-passos.github.io/todo-list-fullture-challenge/loginPage.html
 ```
 
-## :handshake: Colaboradores
+<br>
+
+## :handshake: Team
 <table>
   <tr>
     <td align="center">
       <a href="https://github.com/Richard-Passos">
-        <img src="https://img.freepik.com/vetores-premium/desenho-de-desenho-animado-de-um-programador_29937-8176.jpg" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+        <img src="https://img.freepik.com/vetores-premium/desenho-de-desenho-animado-de-um-programador_29937-8176.jpg" width="100px;" alt="A boy with headphones holding a laptop."/><br>
         <sub>
           <b>Richard P</b>
         </sub>
@@ -28,5 +35,7 @@ https://richard-passos.github.io/todo-list-fullture-challenge/loginPage.html
   </tr>
 </table>
 
-## :dart: Status do projeto
-Finalizado
+<br>
+
+## :dart: Status
+Finished
